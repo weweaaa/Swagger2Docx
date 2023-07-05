@@ -26,9 +26,11 @@ namespace Swagger2Docx.Endpoints
                     .ToArray();
 
 
-                return forecast;
+                return TypedResults.Ok(forecast);
             })
             .WithName("GetWeatherForecast")
+            .WithSummary("GetWeatherForecast")
+            .WithDescription("查詢 WeatherForecast 資料")
             .WithOpenApi();
         }
     }
